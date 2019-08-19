@@ -1,0 +1,70 @@
+// Styles for page builder
+
+$icons-pagebuilder__font-name: 'pagebuilder-font';
+// $icons-pagebuilder__font-path: '${baseDir}Magento_PageBuilder/fonts/pagebuilder-icons/pagebuilder-icons';
+
+$icon-pagebuilder-caret-up__content: '\f104';
+$icon-pagebuilder-caret-down__content: '\f101';
+$icon-pagebuilder-caret-next__content: '\f102';
+$icon-pagebuilder-caret-prev__content: '\f103';
+
+// @import '_icons.less';
+// @import '_layout.less';
+// @import 'slick/_slick.less';
+// @import 'content-type/_import.less';
+
+.cms-content-important {
+    background-color: $white;
+    color: $font-color-base;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    font-style: normal;
+    font-weight: $font-weight-base;
+    line-height: $font-line-height;
+    margin: 0 0 $spacer--large -$spacer--medium;
+    padding: $spacer--medium;
+}
+
+.pagebuilder-full-width {
+    float: left;
+    width: 100%;
+}
+
+.pagebuilder-content-type {
+    box-sizing: border-box;
+    margin-bottom: $spacer--medium;
+}
+
+//
+//  styles for legacy content types
+//  _____________________________________________
+
+// .pagebuilder-accordion {
+//     .lib-data-accordion();
+// }
+
+//
+//  Responsive Classes
+//  _____________________________________________
+
+@include mq(($screen-m + 1px)) {
+    .pagebuilder-mobile-only {
+        display: none;
+    }
+}
+// $media all and (min-width: ($screen__m + 1)) {
+//     .pagebuilder-mobile-only {
+//         display: none !important;
+//     }
+// }
+
+@include mq($max-screen: $screen-m) {
+    .pagebuilder-mobile-hidden {
+        display: none !important; // sass-lint:disable-line no-important
+    }
+}
+// $media all and (max-width: $screen__m) {
+//     .pagebuilder-mobile-hidden {
+//         display: none !important;
+//     }
+// }
